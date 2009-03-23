@@ -1,4 +1,6 @@
-task :default => 'index.cgi' do
+task :default => 'index.cgi'
+
+file 'index.cgi' do
   sh 'ghc --make Fib.hs -cpp -o index.cgi'
   sh 'chmod +x index.cgi'
 end
